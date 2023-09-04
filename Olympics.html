@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympische Spelen</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom {
+            background-color: #0093DD;
+        }
+
+        .jumbotron-custom {
+            background-color: #FFCC29;
+        }
+
+        .header-blue {
+            color: #0093DD;
+        }
+
+        .header-yellow {
+            color: #FFCC29;
+        }
+
+        .header-black {
+            color: #000000;
+        }
+
+        .header-green {
+            color: #009A49;
+        }
+
+        .header-red {
+            color: #EE352E;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand text-white" href="#">Olympische Spelen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sports">Sporten</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#history">Geschiedenis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#paris">Volgende locatie (Parijs)</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="jumbotron jumbotron-custom">
+            <h1 class="display-4">Welkom bij de Olympische Spelen</h1>
+            <p class="lead">De Olympische Spelen zijn een wereldwijd sportevenement dat atleten uit alle hoeken van de wereld samenbrengt.</p>
+        </div>
+    </div>
+
+    <div class="container" id="sports">
+        <h2 class="header-red">Sporten</h2>
+        <p>Hier zijn enkele van de sporten die je tijdens de Olympische Spelen kunt bekijken:</p>
+        <ul>
+            <li>Atletiek</li>
+            <li>Zwemmen</li>
+            <li>Turnen</li>
+            <li>Wielrennen</li>
+            <li>Tennis</li>
+            <li>Basketbal</li>
+            <li>Schermen</li>
+        </ul>
+    </div>
+
+    <div class="container" id="history">
+        <h2 class="header-black">Geschiedenis</h2>
+        <p>De Olympische Spelen (OS) zijn een internationale sportmanifestatie. 
+        De eerste moderne Olympische Spelen werden in 1896 gehouden, geïnspireerd door het gelijknamige Griekse evenement in de Oudheid. 
+        Sinds 1924 zijn er twee versies, de Zomerspelen en de Winterspelen, elk om de vier jaar.</p>
+    </div>
+
+    <div class="container" id="paris">
+        <h2 class="header-green">Volgende locatie (Parijs)</h2>
+        <p>De volgende Olympische Spelen zullen plaatsvinden in Parijs, Frankrijk, in 2024.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            function showSection(sectionId) {
+                $("div[id^='']").hide();
+
+                $("#" + sectionId).show();
+            }
+
+            showSection("home");
+
+            $("nav a").click(function() {
+                var sectionId = $(this).attr("href").substring(1);
+                showSection(sectionId);
+            });
+        });
+    </script>
+</body>
+</html>
